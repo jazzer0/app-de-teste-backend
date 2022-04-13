@@ -12,8 +12,8 @@ CREATE TABLE "Todo" (
     "enabled" BOOLEAN NOT NULL DEFAULT true,
     "text" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "todoGroupId" TEXT,
-    CONSTRAINT "Todo_todoGroupId_fkey" FOREIGN KEY ("todoGroupId") REFERENCES "TodoGroup" ("id") ON DELETE SET NULL ON UPDATE CASCADE
+    "groupId" TEXT,
+    CONSTRAINT "Todo_groupId_fkey" FOREIGN KEY ("groupId") REFERENCES "TodoGroup" ("id") ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 -- CreateIndex

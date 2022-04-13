@@ -1,6 +1,6 @@
 enum ROUTES {
-  TODOS = "/todos",
-  GROUPS = "/groups",
+  TODOS = "/todos/:id?",
+  GROUPS = "/groups/:id?",
 }
 
 export default ROUTES;

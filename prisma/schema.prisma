@@ -19,10 +19,10 @@ model TodoGroup {
 }
 
 model Todo {
-  id          String     @id @unique @default(uuid())
-  enabled     Boolean    @default(true)
-  text        String
-  createdAt   DateTime   @default(now())
-  groupId     TodoGroup? @relation(fields: [todoGroupId], references: [id])
-  todoGroupId String?
+  id        String     @id @unique @default(uuid())
+  enabled   Boolean    @default(true)
+  text      String
+  createdAt DateTime   @default(now())
+  TodoGroup TodoGroup? @relation(fields: [groupId], references: [id])
+  groupId   String?
 }
